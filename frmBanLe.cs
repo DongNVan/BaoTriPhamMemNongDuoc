@@ -121,6 +121,11 @@ namespace CuahangNongduoc
                 row["DON_GIA"] = numDonGia.Value;
                 row["SO_LUONG"] = numSoLuong.Value;
                 row["THANH_TIEN"] = numThanhTien.Value;
+                row["TEN_DICH_VU_PHU"] = txtTenDichVuPhu.Text;
+                row["GIA_DICH_VU_PHU"] = numPhiDichVu.Value;
+                row["PHI_VAN_CHUYEN"] = numPhiVanChuyen.Value;
+                row["CHIET_KHAU"] = numChietKhau.Value;
+                row["GIAM_GIA_HOA_DON"] = numGiamGiaHD.Value;
                 ctrlChiTiet.Add(row);
 
             }
@@ -180,6 +185,7 @@ namespace CuahangNongduoc
             row["TONG_TIEN"] = numTongTien.Value;
             row["DA_TRA"] = numDaTra.Value;
             row["CON_NO"] = numConNo.Value;
+
             ctrlPhieuBan.Add(row);
 
             PhieuBanController ctrl = new PhieuBanController();

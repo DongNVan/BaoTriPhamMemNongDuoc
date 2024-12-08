@@ -49,7 +49,7 @@ namespace CuahangNongduoc
 
         private void dataGridView_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
         {
-            if (MessageBox.Show("Bạn có chắc chắn xóa không?", "Phieu Ban Le", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            if (MessageBox.Show("1Bạn có chắc chắn xóa không?", "Phieu Ban Le", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
             {
                 e.Cancel = true;
             }
@@ -72,7 +72,7 @@ namespace CuahangNongduoc
              if (view != null)
              {
 
-                 if (MessageBox.Show("Bạn có chắc chắn xóa không?", "Phieu Ban Le", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                 if (MessageBox.Show("2Bạn có chắc chắn xóa không?", "Phieu Ban Le", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                  {
                      ChiTietPhieuBanController ctrl = new ChiTietPhieuBanController();
                      IList<ChiTietPhieuBan> ds = ctrl.ChiTietPhieuBan(view["ID"].ToString());
