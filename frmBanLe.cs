@@ -44,12 +44,33 @@ namespace CuahangNongduoc
 
             ctrlKhachHang.HienthiAutoComboBox(cmbKhachHang, false);
 
-            ctrlPhieuBan.HienthiPhieuBan(bindingNavigator,cmbKhachHang, txtMaPhieu, dtNgayLapPhieu, numTongTien, numDaTra, numConNo);
+            ctrlPhieuBan.HienthiPhieuBan(bindingNavigator,cmbKhachHang, txtMaPhieu, dtNgayLapPhieu, numTongTienGiam, numDaTra, numConNo);
 
             bindingNavigator.BindingSource.CurrentChanged -= new EventHandler(BindingSource_CurrentChanged);
             bindingNavigator.BindingSource.CurrentChanged += new EventHandler(BindingSource_CurrentChanged);
             
             ctrlChiTiet.HienThiChiTiet(dgvDanhsachSP, txtMaPhieu.Text);
+
+            foreach (DataGridViewRow row_dgv in dgvDanhsachSP.Rows)
+            {
+                if (row_dgv != null)
+                {
+                    numTongTien.Value += Convert.ToDecimal(row_dgv.Cells[4].Value);
+                }
+            }
+
+            foreach (DataGridViewRow row_dgv in dgvDanhsachSP.Rows)
+            {
+                if (row_dgv != null)
+                {
+                    txtTenDichVuPhu.Text = row_dgv.Cells["TEN_DICH_VU_PHU"].Value.ToString();
+                    numPhiDichVu.Value = Convert.ToDecimal(row_dgv.Cells["GIA_DICH_VU_PHU"].Value);
+                    numPhiVanChuyen.Value = Convert.ToDecimal(row_dgv.Cells["PHI_VAN_CHUYEN"].Value);
+                    numChietKhau.Value = Convert.ToDecimal(row_dgv.Cells["CHIET_KHAU"].Value);
+                    numGiamGiaHD.Value = Convert.ToDecimal(row_dgv.Cells["GIAM_GIA_HOA_DON"].Value);
+                    break;
+                }
+            }
 
 
             if (status == Controll.AddNew)
@@ -114,19 +135,35 @@ namespace CuahangNongduoc
             }
             else
             {
-                numTongTien.Value += numThanhTien.Value;
                 DataRow row = ctrlChiTiet.NewRow();
                 row["ID_MA_SAN_PHAM"] = cmbMaSanPham.SelectedValue;
                 row["ID_PHIEU_BAN"] = txtMaPhieu.Text;
                 row["DON_GIA"] = numDonGia.Value;
                 row["SO_LUONG"] = numSoLuong.Value;
                 row["THANH_TIEN"] = numThanhTien.Value;
-                row["TEN_DICH_VU_PHU"] = txtTenDichVuPhu.Text;
-                row["GIA_DICH_VU_PHU"] = numPhiDichVu.Value;
-                row["PHI_VAN_CHUYEN"] = numPhiVanChuyen.Value;
-                row["CHIET_KHAU"] = numChietKhau.Value;
-                row["GIAM_GIA_HOA_DON"] = numGiamGiaHD.Value;
                 ctrlChiTiet.Add(row);
+
+                numTongTien.Value = 0;
+                foreach (DataGridViewRow row_dgv in dgvDanhsachSP.Rows)
+                {
+                    if (row_dgv != null)
+                    {
+                        numTongTien.Value += Convert.ToDecimal(row_dgv.Cells[4].Value);
+                    }
+                }
+                numTongTienGiam.Value = (numTongTien.Value + numPhiDichVu.Value + numPhiVanChuyen.Value) * (1 - (numChietKhau.Value + numGiamGiaHD.Value) / 100);
+                
+                foreach (DataGridViewRow row_dgv in dgvDanhsachSP.Rows)
+                {
+                    if (row_dgv != null)
+                    {
+                        row_dgv.Cells["TEN_DICH_VU_PHU"].Value = txtTenDichVuPhu.Text;
+                        row_dgv.Cells["GIA_DICH_VU_PHU"].Value = numPhiDichVu.Value;
+                        row_dgv.Cells["PHI_VAN_CHUYEN"].Value = numPhiVanChuyen.Value;
+                        row_dgv.Cells["CHIET_KHAU"].Value = numChietKhau.Value;
+                        row_dgv.Cells["GIAM_GIA_HOA_DON"].Value = numGiamGiaHD.Value;
+                    }
+                }
 
             }
 
@@ -139,7 +176,12 @@ namespace CuahangNongduoc
 
         private void numTongTien_ValueChanged(object sender, EventArgs e)
         {
-            numConNo.Value = numTongTien.Value - numDaTra.Value;
+            
+        }
+
+        private void numTongTenGiam_ValueChanged(object sender, EventArgs e)
+        {
+            numConNo.Value = numTongTienGiam.Value - numDaTra.Value;
         }
 
         private void toolLuu_Click(object sender, EventArgs e)
@@ -182,7 +224,7 @@ namespace CuahangNongduoc
             row["ID"] = txtMaPhieu.Text;
             row["ID_KHACH_HANG"] = cmbKhachHang.SelectedValue;
             row["NGAY_BAN"] = dtNgayLapPhieu.Value.Date;
-            row["TONG_TIEN"] = numTongTien.Value;
+            row["TONG_TIEN"] = numTongTienGiam.Value;
             row["DA_TRA"] = numDaTra.Value;
             row["CON_NO"] = numConNo.Value;
 
@@ -292,6 +334,7 @@ namespace CuahangNongduoc
             txtMaPhieu.Enabled = val;
             dtNgayLapPhieu.Enabled = val;
             numTongTien.Enabled = val;
+            numTongTienGiam.Enabled = val;
             btnAdd.Enabled = val;
             btnRemove.Enabled = val;
             dgvDanhsachSP.Enabled = val;
@@ -342,6 +385,6 @@ namespace CuahangNongduoc
             ctrlSanPham.HienthiAutoComboBox(cmbSanPham);
         }
 
-
-     }
+        
+    }
 }
