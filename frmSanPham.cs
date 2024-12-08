@@ -24,7 +24,8 @@ namespace CuahangNongduoc
             ctrlDVT.HienthiAutoComboBox(cmbDVT);
             dataGridView.Columns.Add(ctrlDVT.HienthiDataGridViewComboBoxColumn());
             ctrl.HienthiDataGridview(dataGridView, bindingNavigator,
-                 txtMaSanPham, txtTenSanPham, cmbDVT, numSoLuong, numDonGiaNhap, numGiaBanSi, numGiaBanLe);
+                 txtMaSanPham, txtTenSanPham, cmbDVT, numSoLuong, numDonGiaNhap, numGiaBanSi, numGiaBanLe,
+                 txtKhuyenMai, numKhuyenMai);
         }
 
 
@@ -45,6 +46,8 @@ namespace CuahangNongduoc
             row["DON_GIA_NHAP"] = 0;
             row["GIA_BAN_SI"] = 0;
             row["GIA_BAN_LE"] = 0;
+            row["TEN_CTKM"] = "";
+            row["TI_LE_KM"] = 0;
             ctrl.Add(row);
             bindingNavigator.BindingSource.MoveLast();
             
