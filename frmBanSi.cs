@@ -41,7 +41,7 @@ namespace CuahangNongduoc
             : this()
         {
             this.idNhanVien = idNhanVien;
-            status = Controll.Normal;
+            status = Controll.AddNew;
         }
 
         private void frmNhapHang_Load(object sender, EventArgs e)

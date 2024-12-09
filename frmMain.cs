@@ -123,7 +123,7 @@ namespace CuahangNongduoc
         {
             if (BanLe == null || BanLe.IsDisposed)
             {
-                BanLe = new frmDanhsachPhieuBanLe();
+                BanLe = new frmDanhsachPhieuBanLe(idNhanVien);
                 BanLe.MdiParent = this;
                 BanLe.Show();
             }
@@ -135,7 +135,7 @@ namespace CuahangNongduoc
         {
             if (BanSi == null || BanSi.IsDisposed)
             {
-                BanSi = new frmDanhsachPhieuBanSi();
+                BanSi = new frmDanhsachPhieuBanSi(idNhanVien);
                 BanSi.MdiParent = this;
                 BanSi.Show();
             }

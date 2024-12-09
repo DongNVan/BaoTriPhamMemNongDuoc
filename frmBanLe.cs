@@ -41,7 +41,7 @@ namespace CuahangNongduoc
             : this()
         {
             this.idNhanVien = idNhanVien;
-            status = Controll.Normal;
+            status = Controll.AddNew;
         }
 
         private void frmNhapHang_Load(object sender, EventArgs e)
@@ -162,7 +162,6 @@ namespace CuahangNongduoc
                 row["TEN_KHUYEN_MAI"] = txtCTKM.Text;
                 row["TI_LE_KM"] = numTiLeGiamGia.Value;
                 row["ID_NHAN_VIEN"] = idNhanVien;
-
                 ctrlChiTiet.Add(row);
 
                 numTongTien.Value = 0;

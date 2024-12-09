@@ -27,7 +27,6 @@ namespace CuahangNongduoc
                 NhanVienController ctrNV = new NhanVienController();
                 if(ctrNV.XacNhanDangNhap(txtTenDangNhap.Text, txtMatKhau.Text) == true)
                 {
-                    MessageBox.Show(ctrNV.GetIDNhanVien(txtTenDangNhap.Text, txtMatKhau.Text));
                     frmMain fMain = new frmMain(ctrNV.GetIDNhanVien(txtTenDangNhap.Text, txtMatKhau.Text));
                     fMain.Show();
                 }
