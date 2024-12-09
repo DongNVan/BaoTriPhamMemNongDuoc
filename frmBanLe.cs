@@ -208,7 +208,6 @@ namespace CuahangNongduoc
             this.Luu();
             status = Controll.Normal;
             this.Allow(false);
-            this.Luu();
         }
 
         void Luu()

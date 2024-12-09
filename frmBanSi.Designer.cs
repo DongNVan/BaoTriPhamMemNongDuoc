@@ -111,6 +111,10 @@
             this.numDaTra = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.chkCTKM = new System.Windows.Forms.CheckBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.txtCTKM = new System.Windows.Forms.TextBox();
+            this.numTiLeGiamGia = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator)).BeginInit();
             this.bindingNavigator.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -133,6 +137,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numConNo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTongTien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numDaTra)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numTiLeGiamGia)).BeginInit();
             this.SuspendLayout();
             // 
             // bindingNavigator
@@ -620,6 +625,10 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.chkCTKM);
+            this.groupBox2.Controls.Add(this.label24);
+            this.groupBox2.Controls.Add(this.txtCTKM);
+            this.groupBox2.Controls.Add(this.numTiLeGiamGia);
             this.groupBox2.Controls.Add(this.btnThemSanPham);
             this.groupBox2.Controls.Add(this.groupBox3);
             this.groupBox2.Controls.Add(this.btnAdd);
@@ -760,7 +769,7 @@
             // btnAdd
             // 
             this.btnAdd.Image = global::CuahangNongduoc.Properties.Resources.down;
-            this.btnAdd.Location = new System.Drawing.Point(252, 205);
+            this.btnAdd.Location = new System.Drawing.Point(252, 220);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(63, 37);
@@ -771,7 +780,7 @@
             // btnRemove
             // 
             this.btnRemove.Image = global::CuahangNongduoc.Properties.Resources.up;
-            this.btnRemove.Location = new System.Drawing.Point(323, 204);
+            this.btnRemove.Location = new System.Drawing.Point(323, 219);
             this.btnRemove.Margin = new System.Windows.Forms.Padding(4);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(64, 38);
@@ -1133,6 +1142,55 @@
             this.label8.TabIndex = 42;
             this.label8.Text = "Tổng tiền";
             // 
+            // chkCTKM
+            // 
+            this.chkCTKM.AutoSize = true;
+            this.chkCTKM.Location = new System.Drawing.Point(16, 187);
+            this.chkCTKM.Name = "chkCTKM";
+            this.chkCTKM.Size = new System.Drawing.Size(119, 20);
+            this.chkCTKM.TabIndex = 71;
+            this.chkCTKM.Text = "Áp dụng CTKM";
+            this.chkCTKM.UseVisualStyleBackColor = true;
+            this.chkCTKM.CheckedChanged += new System.EventHandler(this.chkCTKM_CheckedChanged);
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(148, 189);
+            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(44, 16);
+            this.label24.TabIndex = 70;
+            this.label24.Text = "CTKM";
+            // 
+            // txtCTKM
+            // 
+            this.txtCTKM.Location = new System.Drawing.Point(199, 186);
+            this.txtCTKM.Name = "txtCTKM";
+            this.txtCTKM.Size = new System.Drawing.Size(203, 22);
+            this.txtCTKM.TabIndex = 69;
+            // 
+            // numTiLeGiamGia
+            // 
+            this.numTiLeGiamGia.Enabled = false;
+            this.numTiLeGiamGia.Location = new System.Drawing.Point(409, 186);
+            this.numTiLeGiamGia.Margin = new System.Windows.Forms.Padding(4);
+            this.numTiLeGiamGia.Maximum = new decimal(new int[] {
+            -727379968,
+            232,
+            0,
+            0});
+            this.numTiLeGiamGia.Minimum = new decimal(new int[] {
+            1000000000,
+            0,
+            0,
+            -2147483648});
+            this.numTiLeGiamGia.Name = "numTiLeGiamGia";
+            this.numTiLeGiamGia.Size = new System.Drawing.Size(126, 22);
+            this.numTiLeGiamGia.TabIndex = 68;
+            this.numTiLeGiamGia.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numTiLeGiamGia.ThousandsSeparator = true;
+            // 
             // frmBanSi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1174,6 +1232,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numConNo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTongTien)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numDaTra)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numTiLeGiamGia)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1262,5 +1321,9 @@
         private System.Windows.Forms.NumericUpDown numChietKhau;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.NumericUpDown numTongTienGiam;
+        private System.Windows.Forms.CheckBox chkCTKM;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.TextBox txtCTKM;
+        private System.Windows.Forms.NumericUpDown numTiLeGiamGia;
     }
 }
