@@ -7,6 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using CuahangNongduoc.Controller;
 using CuahangNongduoc.BusinessObject;
+using System.CodeDom;
 
 namespace CuahangNongduoc
 {
@@ -61,14 +62,19 @@ namespace CuahangNongduoc
 
             foreach (DataGridViewRow row_dgv in dgvDanhsachSP.Rows)
             {
-                if (row_dgv != null)
+                try
                 {
-                    txtTenDichVuPhu.Text = row_dgv.Cells["TEN_DICH_VU_PHU"].Value.ToString();
-                    numPhiDichVu.Value = Convert.ToDecimal(row_dgv.Cells["GIA_DICH_VU_PHU"].Value);
-                    numPhiVanChuyen.Value = Convert.ToDecimal(row_dgv.Cells["PHI_VAN_CHUYEN"].Value);
-                    numChietKhau.Value = Convert.ToDecimal(row_dgv.Cells["CHIET_KHAU"].Value);
-                    numGiamGiaHD.Value = Convert.ToDecimal(row_dgv.Cells["GIAM_GIA_HOA_DON"].Value);
-                    break;
+                    if (row_dgv != null)
+                    {
+                        txtTenDichVuPhu.Text = row_dgv.Cells["TEN_DICH_VU_PHU"].Value.ToString();
+                        numPhiDichVu.Value = Convert.ToDecimal(row_dgv.Cells["GIA_DICH_VU_PHU"].Value);
+                        numPhiVanChuyen.Value = Convert.ToDecimal(row_dgv.Cells["PHI_VAN_CHUYEN"].Value);
+                        numChietKhau.Value = Convert.ToDecimal(row_dgv.Cells["CHIET_KHAU"].Value);
+                        numGiamGiaHD.Value = Convert.ToDecimal(row_dgv.Cells["GIAM_GIA_HOA_DON"].Value);
+                        break;
+                    }
+                }
+                catch { 
                 }
             }
 
@@ -141,6 +147,12 @@ namespace CuahangNongduoc
                 row["DON_GIA"] = numDonGia.Value;
                 row["SO_LUONG"] = numSoLuong.Value;
                 row["THANH_TIEN"] = numThanhTien.Value;
+                row["TEN_DICH_VU_PHU"] = txtTenDichVuPhu.Text;
+                row["GIA_DICH_VU_PHU"] = numPhiDichVu.Value;
+                row["PHI_VAN_CHUYEN"] = numPhiVanChuyen.Value;
+                row["CHIET_KHAU"] = numChietKhau.Value;
+                row["GIAM_GIA_HOA_DON"] = numGiamGiaHD.Value;
+
                 ctrlChiTiet.Add(row);
 
                 numTongTien.Value = 0;
@@ -190,6 +202,7 @@ namespace CuahangNongduoc
             this.Luu();
             status = Controll.Normal;
             this.Allow(false);
+            this.Luu();
         }
 
         void Luu()
@@ -258,6 +271,7 @@ namespace CuahangNongduoc
             status = Controll.AddNew;
             txtMaPhieu.Text = ThamSo.LayMaPhieuBan().ToString();
             numTongTien.Value = 0;
+            numTongTienGiam.Value = 0;
             ctrlChiTiet.HienThiChiTiet(dgvDanhsachSP, txtMaPhieu.Text);
             this.Allow(true);
         }
