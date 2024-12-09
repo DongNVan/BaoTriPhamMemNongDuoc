@@ -19,6 +19,7 @@ namespace CuahangNongduoc
         ChiTietPhieuBanController ctrlChiTiet = new ChiTietPhieuBanController();
         IList<MaSanPham> deleted = new List<MaSanPham>();
         Controll status = Controll.Normal;
+        String idNhanVien;
 
         public frmBanSi()
         {
@@ -28,10 +29,18 @@ namespace CuahangNongduoc
         }
 
 
-        public frmBanSi(PhieuBanController ctrlPB)
+        public frmBanSi(PhieuBanController ctrlPB, String idNhanVien)
             : this()
         {
+            this.idNhanVien = idNhanVien;
             this.ctrlPhieuBan = ctrlPB;
+            status = Controll.Normal;
+        }
+
+        public frmBanSi(String idNhanVien)
+            : this()
+        {
+            this.idNhanVien = idNhanVien;
             status = Controll.Normal;
         }
 
@@ -146,7 +155,7 @@ namespace CuahangNongduoc
                 row["GIAM_GIA_HOA_DON"] = numGiamGiaHD.Value;
                 row["TEN_KHUYEN_MAI"] = txtCTKM.Text;
                 row["TI_LE_KM"] = numTiLeGiamGia.Value;
-                //row["ID_NHAN_VIEN"]
+                row["ID_NHAN_VIEN"] = idNhanVien;
 
                 ctrlChiTiet.Add(row);
 

@@ -11,10 +11,17 @@ namespace CuahangNongduoc
 {
     public partial class frmMain : Form
     {
+        String idNhanVien;
         public frmMain()
         {
             InitializeComponent();
         }
+
+        public frmMain(String idNhanVien) : this()
+        {
+            this.idNhanVien = idNhanVien;
+        }
+
         frmDonViTinh DonViTinh = null;
 
         private void mnuDonViTinh_Click(object sender, EventArgs e)

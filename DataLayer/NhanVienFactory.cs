@@ -29,7 +29,16 @@ namespace CuahangNongduoc.DataLayer
             m_Ds.Load(cmd);
             return m_Ds;
         }
-    
+        public String LayIDNhanVien(String tenDangNhap, String matKhau)
+        {
+            OleDbCommand cmd = new OleDbCommand("SELECT * FROM NHAN_VIEN WHERE TEN_DANG_NHAP = @tenDN and MAT_KHAU = @mK");
+            cmd.Parameters.Add("tenDN", OleDbType.VarChar, 50).Value = tenDangNhap;
+            cmd.Parameters.Add("mK", OleDbType.VarChar, 50).Value = matKhau;
+            m_Ds.Load(cmd);
+            DataRow row = m_Ds.Rows[0];
+            return row["ID_NHAN_VIEN"].ToString();
+        }
+
         public DataRow NewRow()
         {
             return m_Ds.NewRow();

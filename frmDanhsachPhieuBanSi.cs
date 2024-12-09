@@ -12,9 +12,15 @@ namespace CuahangNongduoc
 {
     public partial class frmDanhsachPhieuBanSi : Form
     {
+        String idNhanVien;
         public frmDanhsachPhieuBanSi()
         {
             InitializeComponent();
+        }
+
+        public frmDanhsachPhieuBanSi(String idNhanVien) : this()
+        {
+            this.idNhanVien = idNhanVien;
         }
 
         PhieuBanController ctrl = new PhieuBanController();
@@ -29,7 +35,7 @@ namespace CuahangNongduoc
         {
             if (BanLe == null || BanLe.IsDisposed)
             {
-                BanLe = new frmBanSi(ctrl);
+                BanLe = new frmBanSi(ctrl, idNhanVien);
                 BanLe.Show();
             }
             else
@@ -40,7 +46,7 @@ namespace CuahangNongduoc
         {
             if (BanLe == null || BanLe.IsDisposed)
             {
-                BanLe = new frmBanSi();
+                BanLe = new frmBanSi(idNhanVien);
                 BanLe.Show();
             }
             else

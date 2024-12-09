@@ -21,12 +21,16 @@ namespace CuahangNongduoc.Controller
             bs.DataSource = factory.LayNhanVien(idNhanVien);
             dgv.DataSource = bs;
         }
-        public bool XacNhanDangNhap(String tenNV, String matKhau)
+        public bool XacNhanDangNhap(String tenDN, String matKhau)
         {
-            DataTable dt = factory.LayNhanVien(tenNV, matKhau);
+            DataTable dt = factory.LayNhanVien(tenDN, matKhau);
             if (dt.Rows.Count > 0)
                 return true;
             else return false;
+        }
+        public String GetIDNhanVien(String tenDN, String matKhau)
+        {
+            return factory.LayIDNhanVien(tenDN, matKhau);
         }
         public DataRow NewRow()
         {
