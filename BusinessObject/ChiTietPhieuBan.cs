@@ -13,6 +13,7 @@ namespace CuahangNongduoc.BusinessObject
             get { return m_PhieuBan; }
             set { m_PhieuBan = value; }
         }
+
         private MaSanPham m_MaSP;
 
         public MaSanPham MaSanPham
@@ -40,6 +41,14 @@ namespace CuahangNongduoc.BusinessObject
         {
             get { return m_ThanhTien; }
             set { m_ThanhTien = value; }
+        }
+
+        private NhanVien m_NhanVien;
+
+        public NhanVien NhanVien
+        {
+            get { return m_NhanVien; }
+            set { m_NhanVien = value; }
         }
 
     }
