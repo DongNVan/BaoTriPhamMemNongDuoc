@@ -150,6 +150,9 @@ namespace CuahangNongduoc
                 row["PHI_VAN_CHUYEN"] = numPhiVanChuyen.Value;
                 row["CHIET_KHAU"] = numChietKhau.Value;
                 row["GIAM_GIA_HOA_DON"] = numGiamGiaHD.Value;
+                row["TEN_KHUYEN_MAI"] = txtCTKM.Text;
+                row["TI_LE_KM"] = numTiLeGiamGia.Value;
+                //row["ID_NHAN_VIEN"]
 
                 ctrlChiTiet.Add(row);
 
