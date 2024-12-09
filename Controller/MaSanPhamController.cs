@@ -41,6 +41,8 @@ namespace CuahangNongduoc.Controller
                 sp.GiaBanLe = Convert.ToInt64(tbl.Rows[0]["GIA_BAN_LE"]);
                 sp.GiaBanSi = Convert.ToInt64(tbl.Rows[0]["GIA_BAN_SI"]);
                 sp.DonViTinh = ctrlDVT.LayDVT(Convert.ToInt32(tbl.Rows[0]["ID_DON_VI_TINH"]));
+                sp.TenCTKM = tbl.Rows[0]["TEN_CTKM"].ToString();
+                sp.TiLeKM = Convert.ToInt32(tbl.Rows[0]["TI_LE_KM"]);
             }
             return sp;
 
@@ -63,6 +65,7 @@ namespace CuahangNongduoc.Controller
                 sp.NgaySanXuat = Convert.ToDateTime(tbl.Rows[0]["NGAY_SAN_XUAT"]);
                 sp.NgayHetHan = Convert.ToDateTime(tbl.Rows[0]["NGAY_HET_HAN"]);
                 sp.SanPham = ctrlSanPham.LaySanPham(tbl.Rows[0]["ID_SAN_PHAM"].ToString());
+                
                 
             }
             return sp;

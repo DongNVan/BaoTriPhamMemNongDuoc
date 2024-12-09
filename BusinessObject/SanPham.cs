@@ -54,6 +54,23 @@ namespace CuahangNongduoc.BusinessObject
             get { return m_GiaBanLe; }
             set { m_GiaBanLe = value; }
         }
+
+        private String m_TenCTKM;
+
+        public String TenCTKM
+        {
+            get { return m_TenCTKM; }
+            set { m_TenCTKM = value; }
+        }
+
+        private int m_TiLeKM;
+
+        public int TiLeKM
+        {
+            get { return m_TiLeKM; }
+            set { m_TiLeKM = value; }
+        }
+
         private DonViTinh m_DonViTinh;
 
         public DonViTinh DonViTinh

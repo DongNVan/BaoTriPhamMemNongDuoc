@@ -121,7 +121,9 @@ namespace CuahangNongduoc
             txtGiaBanSi.Text = masp.SanPham.GiaBanSi.ToString("#,###0");
             txtGiaBanLe.Text = masp.SanPham.GiaBanLe.ToString("#,###0");
             txtGiaBQGQ.Text = masp.SanPham.DonGiaNhap.ToString("#,###0");
-
+            txtCTKM.Text = masp.SanPham.TenCTKM.ToString();
+            numTiLeGiamGia.Value = masp.SanPham.TiLeKM;
+            chkCTKM.Checked = false;
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -134,10 +136,6 @@ namespace CuahangNongduoc
             else if (numSoLuong.Value <= 0)
             {
                 MessageBox.Show("Vui lòng nhập Số lượng !", "Phieu Nhap", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else if (numDonGia.Value * numSoLuong.Value != numThanhTien.Value)
-            {
-                MessageBox.Show("Thành tiền sai!", "Phieu Nhap", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -181,9 +179,17 @@ namespace CuahangNongduoc
 
         }
 
+        void tinhThanhTien()
+        {
+            if(chkCTKM.Checked == true)
+                numThanhTien.Value = (numDonGia.Value * numSoLuong.Value)*(1-numTiLeGiamGia.Value/100);
+            else
+                numThanhTien.Value = numDonGia.Value * numSoLuong.Value;
+        }
+
         private void numDonGia_ValueChanged(object sender, EventArgs e)
         {
-            numThanhTien.Value = numDonGia.Value * numSoLuong.Value;
+            tinhThanhTien();
         }
 
         private void numTongTien_ValueChanged(object sender, EventArgs e)
@@ -399,6 +405,9 @@ namespace CuahangNongduoc
             ctrlSanPham.HienthiAutoComboBox(cmbSanPham);
         }
 
-        
+        private void chkCTKM_CheckedChanged(object sender, EventArgs e)
+        {
+            tinhThanhTien();
+        }
     }
 }
