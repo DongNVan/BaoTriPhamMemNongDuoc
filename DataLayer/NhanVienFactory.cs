@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Data;
 using System.Data.OleDb;
+using CuahangNongduoc.BusinessObject;
 
 namespace CuahangNongduoc.DataLayer
 {
@@ -16,6 +17,15 @@ namespace CuahangNongduoc.DataLayer
         {
             OleDbCommand cmd = new OleDbCommand("SELECT * FROM NHAN_VIEN WHERE ID_NHAN_VIEN = @id");
             cmd.Parameters.Add("id", OleDbType.VarChar , 50).Value = idNhanVien;
+            m_Ds.Load(cmd);
+            return m_Ds;
+        }
+
+        public DataTable LayNhanVien(String tenDangNhap, String matKhau)
+        {
+            OleDbCommand cmd = new OleDbCommand("SELECT * FROM NHAN_VIEN WHERE TEN_DANG_NHAP = @tenDN and MAT_KHAU = @mK");
+            cmd.Parameters.Add("tenDN", OleDbType.VarChar, 50).Value = tenDangNhap;
+            cmd.Parameters.Add("mK", OleDbType.VarChar, 50).Value = matKhau;
             m_Ds.Load(cmd);
             return m_Ds;
         }

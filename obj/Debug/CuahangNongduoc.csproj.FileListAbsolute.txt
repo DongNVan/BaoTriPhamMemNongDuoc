@@ -183,3 +183,4 @@ D:\Hoc\Nam4_hk1\ThietKeBaoTriPM\DoAN\BaoTriPhamMemNongDuoc\obj\Debug\CuahangNong
 D:\Hoc\Nam4_hk1\ThietKeBaoTriPM\DoAN\BaoTriPhamMemNongDuoc\obj\Debug\CuahangN.B1970924.Up2Date
 D:\Hoc\Nam4_hk1\ThietKeBaoTriPM\DoAN\BaoTriPhamMemNongDuoc\obj\Debug\CuahangNongduoc.exe
 D:\Hoc\Nam4_hk1\ThietKeBaoTriPM\DoAN\BaoTriPhamMemNongDuoc\obj\Debug\CuahangNongduoc.pdb
+D:\Hoc\Nam4_hk1\ThietKeBaoTriPM\DoAN\BaoTriPhamMemNongDuoc\obj\Debug\CuahangNongduoc.frmDangNhap.resources

@@ -15,11 +15,18 @@ namespace CuahangNongduoc.Controller
 
 
 
-        public void HienThiChiTiet(DataGridView dgv, String idNhanVien)
+        public void LayNhanVien(DataGridView dgv, String idNhanVien)
         {
             BindingSource bs = new BindingSource();
             bs.DataSource = factory.LayNhanVien(idNhanVien);
             dgv.DataSource = bs;
+        }
+        public bool XacNhanDangNhap(String tenNV, String matKhau)
+        {
+            DataTable dt = factory.LayNhanVien(tenNV, matKhau);
+            if (dt.Rows.Count > 0)
+                return true;
+            else return false;
         }
         public DataRow NewRow()
         {
