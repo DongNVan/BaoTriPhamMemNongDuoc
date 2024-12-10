@@ -60,7 +60,7 @@ namespace CuahangNongduoc
             bindingNavigator.BindingSource.CurrentChanged += new EventHandler(BindingSource_CurrentChanged);
             
             ctrlChiTiet.HienThiChiTiet(dgvDanhsachSP, txtMaPhieu.Text);
-
+            numTongTien.Value = 0;
             foreach (DataGridViewRow row_dgv in dgvDanhsachSP.Rows)
             {
                 if (row_dgv != null)
@@ -159,8 +159,16 @@ namespace CuahangNongduoc
                 row["PHI_VAN_CHUYEN"] = numPhiVanChuyen.Value;
                 row["CHIET_KHAU"] = numChietKhau.Value;
                 row["GIAM_GIA_HOA_DON"] = numGiamGiaHD.Value;
-                row["TEN_KHUYEN_MAI"] = txtCTKM.Text;
-                row["TI_LE_KM"] = numTiLeGiamGia.Value;
+                if(chkCTKM.Checked == true)
+                {
+                    row["TEN_KHUYEN_MAI"] = txtCTKM.Text;
+                    row["TI_LE_KM"] = numTiLeGiamGia.Value;
+                }
+                else
+                {
+                    row["TEN_KHUYEN_MAI"] = "";
+                    row["TI_LE_KM"] = 0;
+                }
                 row["ID_NHAN_VIEN"] = idNhanVien;
                 ctrlChiTiet.Add(row);
 

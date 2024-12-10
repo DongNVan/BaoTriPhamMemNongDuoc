@@ -55,11 +55,11 @@ namespace CuahangNongduoc
             ctrlKhachHang.HienthiAutoComboBox(cmbKhachHang, true);
 
             
-            ctrlPhieuBan.HienthiPhieuBan(bindingNavigator,cmbKhachHang, txtMaPhieu, dtNgayLapPhieu, numTongTienGiam, numDaTra, numConNo);
+            ctrlPhieuBan.HienthiPhieuBan(bindingNavigator, cmbKhachHang, txtMaPhieu, dtNgayLapPhieu, numTongTienGiam, numDaTra, numConNo);
             bindingNavigator.BindingSource.CurrentChanged += new EventHandler(BindingSource_CurrentChanged);
             
             ctrlChiTiet.HienThiChiTiet(dgvDanhsachSP, txtMaPhieu.Text);
-
+            numTongTien.Value = 0;
             foreach (DataGridViewRow row_dgv in dgvDanhsachSP.Rows)
             {
                 if (row_dgv != null)
