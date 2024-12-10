@@ -184,3 +184,101 @@ D:\Hoc\Nam4_hk1\ThietKeBaoTriPM\DoAN\BaoTriPhamMemNongDuoc\obj\Debug\CuahangN.B1
 D:\Hoc\Nam4_hk1\ThietKeBaoTriPM\DoAN\BaoTriPhamMemNongDuoc\obj\Debug\CuahangNongduoc.exe
 D:\Hoc\Nam4_hk1\ThietKeBaoTriPM\DoAN\BaoTriPhamMemNongDuoc\obj\Debug\CuahangNongduoc.pdb
 D:\Hoc\Nam4_hk1\ThietKeBaoTriPM\DoAN\BaoTriPhamMemNongDuoc\obj\Debug\CuahangNongduoc.frmDangNhap.resources
+D:\Nam4\TKBTPM\bt\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+D:\Nam4\TKBTPM\bt\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\Nam4\TKBTPM\bt\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+D:\Nam4\TKBTPM\bt\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\Nam4\TKBTPM\bt\bin\Debug\CuahangNongduoc.exe
+D:\Nam4\TKBTPM\bt\bin\Debug\CuahangNongduoc.pdb
+D:\Nam4\TKBTPM\bt\bin\Debug\Microsoft.ReportViewer.Common.dll
+D:\Nam4\TKBTPM\bt\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+D:\Nam4\TKBTPM\bt\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\Nam4\TKBTPM\bt\bin\Debug\Microsoft.ReportViewer.WinForms.xml
+D:\Nam4\TKBTPM\bt\obj\Debug\CuahangNongduoc.csproj.AssemblyReference.cache
+D:\Nam4\TKBTPM\bt\obj\Debug\CuahangNongduoc.frmDangNhap.resources
+D:\Nam4\TKBTPM\bt\obj\Debug\CuahangNongduoc.frmInPhieuChi.resources
+D:\Nam4\TKBTPM\bt\obj\Debug\CuahangNongduoc.frmPhieuChi.resources
+D:\Nam4\TKBTPM\bt\obj\Debug\CuahangNongduoc.frmLyDoChi.resources
+D:\Nam4\TKBTPM\bt\obj\Debug\CuahangNongduoc.frmBanSi.resources
+D:\Nam4\TKBTPM\bt\obj\Debug\CuahangNongduoc.frmDanhsachPhieuBanSi.resources
+D:\Nam4\TKBTPM\bt\obj\Debug\CuahangNongduoc.frmDanhsachPhieuBanLe.resources
+D:\Nam4\TKBTPM\bt\obj\Debug\CuahangNongduoc.frmBanLe.resources
+D:\Nam4\TKBTPM\bt\obj\Debug\CuahangNongduoc.frmDaiLy.resources
+D:\Nam4\TKBTPM\bt\obj\Debug\CuahangNongduoc.frmDanhsachPhieuNhap.resources
+D:\Nam4\TKBTPM\bt\obj\Debug\CuahangNongduoc.frmDoanhThu.resources
+D:\Nam4\TKBTPM\bt\obj\Debug\CuahangNongduoc.frmDonViTinh.resources
+D:\Nam4\TKBTPM\bt\obj\Debug\CuahangNongduoc.frmDunoKhachhang.resources
+D:\Nam4\TKBTPM\bt\obj\Debug\CuahangNongduoc.frmInDunoKhachHang.resources
+D:\Nam4\TKBTPM\bt\obj\Debug\CuahangNongduoc.frmInPhieuBan.resources
+D:\Nam4\TKBTPM\bt\obj\Debug\CuahangNongduoc.frmInPhieuNhap.resources
+D:\Nam4\TKBTPM\bt\obj\Debug\CuahangNongduoc.frmKhachHang.resources
+D:\Nam4\TKBTPM\bt\obj\Debug\CuahangNongduoc.frmMain.resources
+D:\Nam4\TKBTPM\bt\obj\Debug\CuahangNongduoc.frmNhaCungCap.resources
+D:\Nam4\TKBTPM\bt\obj\Debug\CuahangNongduoc.frmNhapHang.resources
+D:\Nam4\TKBTPM\bt\obj\Debug\CuahangNongduoc.frmInPhieuThanhToan.resources
+D:\Nam4\TKBTPM\bt\obj\Debug\CuahangNongduoc.frmSanPham.resources
+D:\Nam4\TKBTPM\bt\obj\Debug\CuahangNongduoc.frmSanphamHethan.resources
+D:\Nam4\TKBTPM\bt\obj\Debug\CuahangNongduoc.frmSoLuongBan.resources
+D:\Nam4\TKBTPM\bt\obj\Debug\CuahangNongduoc.frmSoLuongTon.resources
+D:\Nam4\TKBTPM\bt\obj\Debug\CuahangNongduoc.frmThanhToan.resources
+D:\Nam4\TKBTPM\bt\obj\Debug\CuahangNongduoc.frmThongtinCuahang.resources
+D:\Nam4\TKBTPM\bt\obj\Debug\CuahangNongduoc.frmThongtinLienhe.resources
+D:\Nam4\TKBTPM\bt\obj\Debug\CuahangNongduoc.frmTimPhieuBanLe.resources
+D:\Nam4\TKBTPM\bt\obj\Debug\CuahangNongduoc.frmTimPhieuChi.resources
+D:\Nam4\TKBTPM\bt\obj\Debug\CuahangNongduoc.frmTimPhieuNhap.resources
+D:\Nam4\TKBTPM\bt\obj\Debug\CuahangNongduoc.frmTimPhieuThu.resources
+D:\Nam4\TKBTPM\bt\obj\Debug\CuahangNongduoc.Properties.Resources.resources
+D:\Nam4\TKBTPM\bt\obj\Debug\CuahangNongduoc.csproj.GenerateResource.cache
+D:\Nam4\TKBTPM\bt\obj\Debug\CuahangNongduoc.csproj.CoreCompileInputs.cache
+D:\Nam4\TKBTPM\bt\obj\Debug\CuahangN.B1970924.Up2Date
+D:\Nam4\TKBTPM\bt\obj\Debug\CuahangNongduoc.exe
+D:\Nam4\TKBTPM\bt\obj\Debug\CuahangNongduoc.pdb
+D:\Hoc\Nam4_hk1\ThietKeBaoTriPM\DoAN\BaoTriPhamMemNongDuoc - Copy (4)\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+D:\Hoc\Nam4_hk1\ThietKeBaoTriPM\DoAN\BaoTriPhamMemNongDuoc - Copy (4)\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\Hoc\Nam4_hk1\ThietKeBaoTriPM\DoAN\BaoTriPhamMemNongDuoc - Copy (4)\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+D:\Hoc\Nam4_hk1\ThietKeBaoTriPM\DoAN\BaoTriPhamMemNongDuoc - Copy (4)\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\Hoc\Nam4_hk1\ThietKeBaoTriPM\DoAN\BaoTriPhamMemNongDuoc - Copy (4)\bin\Debug\CuahangNongduoc.exe
+D:\Hoc\Nam4_hk1\ThietKeBaoTriPM\DoAN\BaoTriPhamMemNongDuoc - Copy (4)\bin\Debug\CuahangNongduoc.pdb
+D:\Hoc\Nam4_hk1\ThietKeBaoTriPM\DoAN\BaoTriPhamMemNongDuoc - Copy (4)\bin\Debug\Microsoft.ReportViewer.Common.dll
+D:\Hoc\Nam4_hk1\ThietKeBaoTriPM\DoAN\BaoTriPhamMemNongDuoc - Copy (4)\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+D:\Hoc\Nam4_hk1\ThietKeBaoTriPM\DoAN\BaoTriPhamMemNongDuoc - Copy (4)\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\Hoc\Nam4_hk1\ThietKeBaoTriPM\DoAN\BaoTriPhamMemNongDuoc - Copy (4)\bin\Debug\Microsoft.ReportViewer.WinForms.xml
+D:\Hoc\Nam4_hk1\ThietKeBaoTriPM\DoAN\BaoTriPhamMemNongDuoc - Copy (4)\obj\Debug\CuahangNongduoc.csproj.AssemblyReference.cache
+D:\Hoc\Nam4_hk1\ThietKeBaoTriPM\DoAN\BaoTriPhamMemNongDuoc - Copy (4)\obj\Debug\CuahangNongduoc.frmDangNhap.resources
+D:\Hoc\Nam4_hk1\ThietKeBaoTriPM\DoAN\BaoTriPhamMemNongDuoc - Copy (4)\obj\Debug\CuahangNongduoc.frmInPhieuChi.resources
+D:\Hoc\Nam4_hk1\ThietKeBaoTriPM\DoAN\BaoTriPhamMemNongDuoc - Copy (4)\obj\Debug\CuahangNongduoc.frmPhieuChi.resources
+D:\Hoc\Nam4_hk1\ThietKeBaoTriPM\DoAN\BaoTriPhamMemNongDuoc - Copy (4)\obj\Debug\CuahangNongduoc.frmLyDoChi.resources
+D:\Hoc\Nam4_hk1\ThietKeBaoTriPM\DoAN\BaoTriPhamMemNongDuoc - Copy (4)\obj\Debug\CuahangNongduoc.frmBanSi.resources
+D:\Hoc\Nam4_hk1\ThietKeBaoTriPM\DoAN\BaoTriPhamMemNongDuoc - Copy (4)\obj\Debug\CuahangNongduoc.frmDanhsachPhieuBanSi.resources
+D:\Hoc\Nam4_hk1\ThietKeBaoTriPM\DoAN\BaoTriPhamMemNongDuoc - Copy (4)\obj\Debug\CuahangNongduoc.frmDanhsachPhieuBanLe.resources
+D:\Hoc\Nam4_hk1\ThietKeBaoTriPM\DoAN\BaoTriPhamMemNongDuoc - Copy (4)\obj\Debug\CuahangNongduoc.frmBanLe.resources
+D:\Hoc\Nam4_hk1\ThietKeBaoTriPM\DoAN\BaoTriPhamMemNongDuoc - Copy (4)\obj\Debug\CuahangNongduoc.frmDaiLy.resources
+D:\Hoc\Nam4_hk1\ThietKeBaoTriPM\DoAN\BaoTriPhamMemNongDuoc - Copy (4)\obj\Debug\CuahangNongduoc.frmDanhsachPhieuNhap.resources
+D:\Hoc\Nam4_hk1\ThietKeBaoTriPM\DoAN\BaoTriPhamMemNongDuoc - Copy (4)\obj\Debug\CuahangNongduoc.frmDoanhThu.resources
+D:\Hoc\Nam4_hk1\ThietKeBaoTriPM\DoAN\BaoTriPhamMemNongDuoc - Copy (4)\obj\Debug\CuahangNongduoc.frmDonViTinh.resources
+D:\Hoc\Nam4_hk1\ThietKeBaoTriPM\DoAN\BaoTriPhamMemNongDuoc - Copy (4)\obj\Debug\CuahangNongduoc.frmDunoKhachhang.resources
+D:\Hoc\Nam4_hk1\ThietKeBaoTriPM\DoAN\BaoTriPhamMemNongDuoc - Copy (4)\obj\Debug\CuahangNongduoc.frmInDunoKhachHang.resources
+D:\Hoc\Nam4_hk1\ThietKeBaoTriPM\DoAN\BaoTriPhamMemNongDuoc - Copy (4)\obj\Debug\CuahangNongduoc.frmInPhieuBan.resources
+D:\Hoc\Nam4_hk1\ThietKeBaoTriPM\DoAN\BaoTriPhamMemNongDuoc - Copy (4)\obj\Debug\CuahangNongduoc.frmInPhieuNhap.resources
+D:\Hoc\Nam4_hk1\ThietKeBaoTriPM\DoAN\BaoTriPhamMemNongDuoc - Copy (4)\obj\Debug\CuahangNongduoc.frmKhachHang.resources
+D:\Hoc\Nam4_hk1\ThietKeBaoTriPM\DoAN\BaoTriPhamMemNongDuoc - Copy (4)\obj\Debug\CuahangNongduoc.frmMain.resources
+D:\Hoc\Nam4_hk1\ThietKeBaoTriPM\DoAN\BaoTriPhamMemNongDuoc - Copy (4)\obj\Debug\CuahangNongduoc.frmNhaCungCap.resources
+D:\Hoc\Nam4_hk1\ThietKeBaoTriPM\DoAN\BaoTriPhamMemNongDuoc - Copy (4)\obj\Debug\CuahangNongduoc.frmNhapHang.resources
+D:\Hoc\Nam4_hk1\ThietKeBaoTriPM\DoAN\BaoTriPhamMemNongDuoc - Copy (4)\obj\Debug\CuahangNongduoc.frmInPhieuThanhToan.resources
+D:\Hoc\Nam4_hk1\ThietKeBaoTriPM\DoAN\BaoTriPhamMemNongDuoc - Copy (4)\obj\Debug\CuahangNongduoc.frmSanPham.resources
+D:\Hoc\Nam4_hk1\ThietKeBaoTriPM\DoAN\BaoTriPhamMemNongDuoc - Copy (4)\obj\Debug\CuahangNongduoc.frmSanphamHethan.resources
+D:\Hoc\Nam4_hk1\ThietKeBaoTriPM\DoAN\BaoTriPhamMemNongDuoc - Copy (4)\obj\Debug\CuahangNongduoc.frmSoLuongBan.resources
+D:\Hoc\Nam4_hk1\ThietKeBaoTriPM\DoAN\BaoTriPhamMemNongDuoc - Copy (4)\obj\Debug\CuahangNongduoc.frmSoLuongTon.resources
+D:\Hoc\Nam4_hk1\ThietKeBaoTriPM\DoAN\BaoTriPhamMemNongDuoc - Copy (4)\obj\Debug\CuahangNongduoc.frmThanhToan.resources
+D:\Hoc\Nam4_hk1\ThietKeBaoTriPM\DoAN\BaoTriPhamMemNongDuoc - Copy (4)\obj\Debug\CuahangNongduoc.frmThongtinCuahang.resources
+D:\Hoc\Nam4_hk1\ThietKeBaoTriPM\DoAN\BaoTriPhamMemNongDuoc - Copy (4)\obj\Debug\CuahangNongduoc.frmThongtinLienhe.resources
+D:\Hoc\Nam4_hk1\ThietKeBaoTriPM\DoAN\BaoTriPhamMemNongDuoc - Copy (4)\obj\Debug\CuahangNongduoc.frmTimPhieuBanLe.resources
+D:\Hoc\Nam4_hk1\ThietKeBaoTriPM\DoAN\BaoTriPhamMemNongDuoc - Copy (4)\obj\Debug\CuahangNongduoc.frmTimPhieuChi.resources
+D:\Hoc\Nam4_hk1\ThietKeBaoTriPM\DoAN\BaoTriPhamMemNongDuoc - Copy (4)\obj\Debug\CuahangNongduoc.frmTimPhieuNhap.resources
+D:\Hoc\Nam4_hk1\ThietKeBaoTriPM\DoAN\BaoTriPhamMemNongDuoc - Copy (4)\obj\Debug\CuahangNongduoc.frmTimPhieuThu.resources
+D:\Hoc\Nam4_hk1\ThietKeBaoTriPM\DoAN\BaoTriPhamMemNongDuoc - Copy (4)\obj\Debug\CuahangNongduoc.Properties.Resources.resources
+D:\Hoc\Nam4_hk1\ThietKeBaoTriPM\DoAN\BaoTriPhamMemNongDuoc - Copy (4)\obj\Debug\CuahangNongduoc.csproj.GenerateResource.cache
+D:\Hoc\Nam4_hk1\ThietKeBaoTriPM\DoAN\BaoTriPhamMemNongDuoc - Copy (4)\obj\Debug\CuahangNongduoc.csproj.CoreCompileInputs.cache
+D:\Hoc\Nam4_hk1\ThietKeBaoTriPM\DoAN\BaoTriPhamMemNongDuoc - Copy (4)\obj\Debug\CuahangN.B1970924.Up2Date
+D:\Hoc\Nam4_hk1\ThietKeBaoTriPM\DoAN\BaoTriPhamMemNongDuoc - Copy (4)\obj\Debug\CuahangNongduoc.exe
+D:\Hoc\Nam4_hk1\ThietKeBaoTriPM\DoAN\BaoTriPhamMemNongDuoc - Copy (4)\obj\Debug\CuahangNongduoc.pdb

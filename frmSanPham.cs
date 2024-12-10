@@ -28,7 +28,6 @@ namespace CuahangNongduoc
                  txtKhuyenMai, numKhuyenMai);
         }
 
-
         private void toolLuu_Click(object sender, EventArgs e)
         {
             bindingNavigatorPositionItem.Focus();
@@ -37,9 +36,15 @@ namespace CuahangNongduoc
 
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
         {
+            AddNewProductRow();  // REFACTORED
+            bindingNavigator.BindingSource.MoveLast();
+        }
+
+        private void AddNewProductRow()  // NEW
+        {
             DataRow row = ctrl.NewRow();
             long maso = ThamSo.SanPham;
-            ThamSo.SanPham = maso+1;
+            ThamSo.SanPham = maso + 1;
             row["ID"] = maso;
             row["TEN_SAN_PHAM"] = "";
             row["SO_LUONG"] = 0;
@@ -49,11 +54,8 @@ namespace CuahangNongduoc
             row["TEN_CTKM"] = "";
             row["TI_LE_KM"] = 0;
             ctrl.Add(row);
-            bindingNavigator.BindingSource.MoveLast();
-            
         }
 
-      
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Bạn có chắc chắn xóa không?", "San Pham", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -70,7 +72,6 @@ namespace CuahangNongduoc
         private void dataGridView_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
             e.Cancel = true;
-            
         }
 
         private void btnThemDVT_Click(object sender, EventArgs e)
@@ -80,13 +81,11 @@ namespace CuahangNongduoc
             ctrlDVT.HienthiAutoComboBox(cmbDVT);
         }
 
-
         private void toolTimMaSanPham_Click(object sender, EventArgs e)
         {
             toolTimMaSanPham.Checked = true;
             toolTimTenSanPham.Checked = false;
             toolTimSanPham.Text = "";
-
         }
 
         private void mnuTimTenSanPham_Click(object sender, EventArgs e)
@@ -100,18 +99,18 @@ namespace CuahangNongduoc
         {
             if (e.KeyCode == Keys.Enter)
             {
-                TimSanPham();
+                SearchProduct();  // REFACTORED
             }
         }
 
         private void toolTimSanPham_Leave(object sender, EventArgs e)
         {
-            TimSanPham();
+            SearchProduct();  // REFACTORED
         }
 
-        void TimSanPham()
+        private void SearchProduct()  // NEW
         {
-            if (toolTimMaSanPham.Checked == true)
+            if (toolTimMaSanPham.Checked)
             {
                 ctrl.TimMaSanPham(toolTimSanPham.Text);
             }
@@ -123,11 +122,13 @@ namespace CuahangNongduoc
 
         private void toolTimSanPham_Enter(object sender, EventArgs e)
         {
+            ResetSearchBox();  // REFACTORED
+        }
+
+        private void ResetSearchBox()  // NEW
+        {
             toolTimSanPham.Text = "";
             toolTimSanPham.ForeColor = Color.Black;
         }
-      
-
-
     }
 }

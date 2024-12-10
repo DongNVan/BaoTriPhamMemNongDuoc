@@ -11,6 +11,12 @@ namespace CuahangNongduoc
     public partial class frmNhaCungCap : Form
     {
         CuahangNongduoc.Controller.NhaCungCapController ctrl = new CuahangNongduoc.Controller.NhaCungCapController();
+
+        // Refactored: Declare constants for search text and placeholder color
+        private const string SearchByNameText = "Tìm theo Nhà cung cấp"; // Refactored
+        private const string SearchByAddressText = "Tìm theo Địa chỉ"; // Refactored
+        private const int PlaceholderTextColor = 224; // Refactored
+
         public frmNhaCungCap()
         {
             InitializeComponent();
@@ -26,10 +32,16 @@ namespace CuahangNongduoc
 
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn có chắc chắn xóa không?", "Nha Cung Cap", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (ConfirmDelete()) // Refactored: Extracted method for delete confirmation
             {
                 bindingNavigator.BindingSource.RemoveCurrent();
             }
+        }
+
+        // Refactored: Extracted method to confirm deletion
+        private bool ConfirmDelete() // Refactored
+        {
+            return MessageBox.Show("Bạn có chắc chắn xóa không?", "Nha Cung Cap", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes;
         }
 
         private void frmNhaCungCap_Load(object sender, EventArgs e)
@@ -39,12 +51,17 @@ namespace CuahangNongduoc
 
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
         {
-            long maso = ThamSo.NhaCungCap;
-            ThamSo.NhaCungCap = maso + 1;
-
+            long maso = GetNextMaso(); // Refactored: Used method to get next maso
             DataRowView row = (DataRowView)bindingNavigator.BindingSource.AddNew();
             row["ID"] = maso;
-            
+        }
+
+        // Refactored: Extracted method to get next maso
+        private long GetNextMaso() // Refactored
+        {
+            long maso = ThamSo.NhaCungCap;
+            ThamSo.NhaCungCap = maso + 1;
+            return maso;
         }
 
         private void toolLuu_Click(object sender, EventArgs e)
@@ -68,40 +85,55 @@ namespace CuahangNongduoc
         {
             if (e.KeyChar == 13)
             {
-                if (toolTimHoTen.Checked)
-                {
-                    ctrl.TimHoTen(toolTimNhaCungCap.Text);
-                }
-                else
-                {
-                    ctrl.TimDiaChi(toolTimNhaCungCap.Text);
-                }
+                SearchNhaCungCap(); // Refactored: Moved search logic to a separate method
+            }
+        }
+
+        // Refactored: Extracted search logic to a separate method
+        private void SearchNhaCungCap() // Refactored
+        {
+            var searchText = toolTimNhaCungCap.Text;
+            if (toolTimHoTen.Checked)
+            {
+                ctrl.TimHoTen(searchText);
+            }
+            else if (toolTimDiaChi.Checked)
+            {
+                ctrl.TimDiaChi(searchText);
             }
         }
 
         private void toolTimNhaCungCap_Leave(object sender, EventArgs e)
         {
-            if (toolTimHoTen.Checked == true)
-                toolTimNhaCungCap.Text = "Tìm theo Nhà cung cấp";
-            else
-                toolTimNhaCungCap.Text = "Tìm theo Địa chỉ";
-
-            toolTimNhaCungCap.ForeColor = Color.FromArgb(224, 224, 224);
+            toolTimNhaCungCap.Text = toolTimHoTen.Checked ? SearchByNameText : SearchByAddressText; // Refactored: Using constants
+            toolTimNhaCungCap.ForeColor = Color.FromArgb(PlaceholderTextColor, PlaceholderTextColor, PlaceholderTextColor); // Refactored: Using constant for color
         }
 
         private void toolTimHoTen_Click(object sender, EventArgs e)
         {
-            toolTimDiaChi.Checked = !toolTimDiaChi.Checked;
-            toolTimHoTen.Checked = !toolTimDiaChi.Checked;
-            toolTimNhaCungCap.Text = "Tìm theo Nhà cung cấp";
+            ToggleSearchByName(); // Refactored: Extracted search toggle logic to a separate method
+        }
+
+        // Refactored: Extracted method to toggle search by name
+        private void ToggleSearchByName() // Refactored
+        {
+            toolTimDiaChi.Checked = false;
+            toolTimHoTen.Checked = true;
+            toolTimNhaCungCap.Text = SearchByNameText;
             bindingNavigator.Focus();
         }
 
         private void toolTimDiaChi_Click(object sender, EventArgs e)
         {
-            toolTimHoTen.Checked = !toolTimHoTen.Checked;
-            toolTimDiaChi.Checked = !toolTimHoTen.Checked;
-            toolTimNhaCungCap.Text = "Tìm theo Địa chỉ";
+            ToggleSearchByAddress(); // Refactored: Extracted search toggle logic to a separate method
+        }
+
+        // Refactored: Extracted method to toggle search by address
+        private void ToggleSearchByAddress() // Refactored
+        {
+            toolTimHoTen.Checked = false;
+            toolTimDiaChi.Checked = true;
+            toolTimNhaCungCap.Text = SearchByAddressText;
             bindingNavigator.Focus();
         }
     }

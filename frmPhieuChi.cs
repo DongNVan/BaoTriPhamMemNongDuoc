@@ -13,60 +13,84 @@ namespace CuahangNongduoc
     {
         LyDoChiController ctrlLyDo = new LyDoChiController();
         PhieuChiController ctrl = new PhieuChiController();
+
+        // Hằng số để thay thế cho các giá trị ma thuật
+        private const string DeleteConfirmationMessage = "Bạn chắc chắn xóa phiếu chi này không?";
+        private const string DeleteConfirmationTitle = "Phieu Chi";
+        private const DialogResult DeleteConfirmationYes = DialogResult.Yes;
+
+        // Constructor
         public frmPhieuChi()
         {
             InitializeComponent();
         }
 
+        // Đổi tên phương thức để dễ hiểu hơn và tách các phần khác nhau ra
         private void frmThanhToan_Load(object sender, EventArgs e)
+        {
+            InitializeComboBoxes();
+            InitializeDataGridView();
+        }
+
+        // Phương thức để khởi tạo các ComboBox
+        private void InitializeComboBoxes()
         {
             ctrlLyDo.HienthiAutoComboBox(cmbLyDoChi);
             ctrlLyDo.HienthiDataGridviewComboBox(colLyDoChi);
+        }
+
+        // Phương thức để khởi tạo DataGridView
+        private void InitializeDataGridView()
+        {
             ctrl.HienthiPhieuChi(bindingNavigator, dataGridView, cmbLyDoChi, txtMaPhieu, dtNgayChi, numTongTien, txtGhiChu);
         }
 
+        // Sử dụng Guard Clause thay vì điều kiện lồng nhau để đơn giản hóa logic
+        private void toolDelete_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show(DeleteConfirmationMessage, DeleteConfirmationTitle, MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DeleteConfirmationYes)
+            {
+                return;
+            }
+
+            bindingNavigator.BindingSource.RemoveCurrent();
+            ctrl.Save();
+        }
+
+        // Sử dụng Extract Method để tách logic xác nhận xóa phiếu chi
+        private bool ConfirmDeletion()
+        {
+            return MessageBox.Show(DeleteConfirmationMessage, DeleteConfirmationTitle, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DeleteConfirmationYes;
+        }
+
+        private void dataGridView_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
+        {
+            if (!ConfirmDeletion())
+            {
+                e.Cancel = true;
+            }
+        }
+
+        // Sử dụng phương thức trực tiếp thay vì biến tạm thời
         private void toolAdd_Click(object sender, EventArgs e)
         {
-            long maphieu = ThamSo.PhieuChi;
-            ThamSo.PhieuChi=maphieu+1;
+            ThamSo.PhieuChi = ThamSo.PhieuChi + 1;
 
             DataRow row = ctrl.NewRow();
-            row["ID"] = maphieu;
+            row["ID"] = ThamSo.PhieuChi;
             row["NGAY_CHI"] = dtNgayChi.Value.Date;
             row["TONG_TIEN"] = numTongTien.Value;
             ctrl.Add(row);
             bindingNavigator.BindingSource.MoveLast();
         }
 
-        private void dataGridView_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
-        {
-            if (MessageBox.Show("Bạn chắc chắn xóa phiếu chi này không?", "Phieu Chi",   MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
-            {
-                e.Cancel = true;
-            }
-        }
-
-        private void toolDelete_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Bạn chắc chắn xóa phiếu chi này không?", "Phieu Chi", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                bindingNavigator.BindingSource.RemoveCurrent();
-                ctrl.Save();
-            }
-        }
-
-        private void toolSave_Click(object sender, EventArgs e)
-        {
-            txtMaPhieu.Focus();
-            bindingNavigator.BindingSource.MoveNext();
-            ctrl.Save();
-        }
-
+        // Đơn giản hóa biểu thức điều kiện
         private void dataGridView_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
             e.Cancel = true;
         }
 
+        // Phương thức in phiếu chi
         private void toolIn_Click(object sender, EventArgs e)
         {
             DataRowView row = (DataRowView)bindingNavigator.BindingSource.Current;
@@ -80,6 +104,7 @@ namespace CuahangNongduoc
             }
         }
 
+        // Mở form LyDoChi khi thêm lý do chi mới
         private void btnThemLyDoChi_Click(object sender, EventArgs e)
         {
             frmLyDoChi Chi = new frmLyDoChi();
@@ -87,6 +112,7 @@ namespace CuahangNongduoc
             ctrlLyDo.HienthiAutoComboBox(cmbLyDoChi);
         }
 
+        // Tìm kiếm phiếu chi với bộ lọc lý do chi và ngày chi
         private void toolTimKiem_Click(object sender, EventArgs e)
         {
             frmTimPhieuChi Tim = new frmTimPhieuChi();
@@ -98,8 +124,14 @@ namespace CuahangNongduoc
             if (Tim.DialogResult == DialogResult.OK)
             {
                 ctrl.TimPhieuChi(bindingNavigator, dataGridView, cmbLyDoChi, txtMaPhieu, dtNgayChi, numTongTien, txtGhiChu, Convert.ToInt32(Tim.cmbLyDo.SelectedValue), dtNgayChi.Value.Date);
-                
             }
+        }
+
+        private void toolSave_Click(object sender, EventArgs e)
+        {
+            txtMaPhieu.Focus();
+            bindingNavigator.BindingSource.MoveNext();
+            ctrl.Save();
         }
     }
 }
